@@ -29,9 +29,10 @@
       color: #e7e7e7;
       min-height: 100vh;
       line-height: 1.5;
+      width: 100%;
     }
 
-    .layer-blur {
+    /* .layer-blur {
       position: fixed;
       top: 0;
       left: 0;
@@ -39,7 +40,7 @@
       height: 100%;
       backdrop-filter: blur(10px);
       z-index: -1;
-    }
+    } */
     /* Gradient and layer blur effect */
     .image-gradient {
       position: absolute;
@@ -66,12 +67,14 @@
       padding: 0 2rem;
       position: relative;
       overflow: hidden;
+      min-height: 82vh;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 1.5rem;
+      width: 100%;
       z-index: 999;
     }
     header h1 {
@@ -88,6 +91,7 @@
       cursor: pointer;
       font-size: 1rem;
       font-weight: 500;
+      border: 2px solid green;
       transition: background-color 0.2s ease;
       z-index: 999;
     }
@@ -99,7 +103,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       min-height: calc(90vh - 6rem);
     }
     .content {
@@ -163,7 +166,7 @@
       max-width: 35rem;
     }
 
-    .button {
+    .content .button {
       margin-top: 2rem;
       z-index: 999;
     }
@@ -219,32 +222,49 @@
 
     /* mobile responsive */
     @media (max-width: 768px) {
+      body {
+        min-height: 80vh;
+        width: 100%;
+      }
       header {
         padding: 0.6rem 1.5rem;
+        width: 100%;
       }
       header h1 {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
       }
       .hire-me-button {
         padding: 0.6rem 1.2rem;
+        font-size: 0.5rem;
       }
-      main {
-        margin-top: -10rem;
-      }
+
       .content {
-        margin-top: 25rem;
+        margin-top: 1rem;
         max-width: 30rem;
         margin-left: 10%;
       }
+      .content h1 {
+        font-size: 2rem;
+      }
+      .sub-heading {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+        color: gray;
+        max-width: 35rem;
+      }
       .robot-3d {
         width: 100%;
-        top: -10rem;
+        top: -6rem;
         right: 0;
         /* height: 40vh; */
       }
 
       .tag-box {
         width: 12rem;
+      }
+      .content .button {
+        text-align: center;
       }
     }
   </style>
@@ -306,7 +326,7 @@
             data-aos-duration="3000"
             class="button"
           >
-            <a href="index.html" class="btn-get-started">Get Started &gt;</a>
+            <a href="Landing.html" class="btn-get-started">Get Started &gt;</a>
           </div>
         </div>
       </main>
