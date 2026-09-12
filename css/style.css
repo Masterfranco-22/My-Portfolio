@@ -624,6 +624,37 @@ nav ul li a:hover{
     margin-bottom: 15px;
 
 }
+@media (max-width:768px){
+.ser{
+    font-size: 1.5rem;
+}
+
+.service{
+    grid-template-columns: auto;
+}
+.service-card{
+    min-height: 100px;
+    width: 100%;
+
+}
+
+
+/* skill card */
+.skills-panel{
+    padding: 2rem;
+}
+.skills-grid{
+    grid-template-columns: repeat(2, minmax(70px, 1fr));
+}
+.skill-card{
+    height: 50px;
+    padding: 2rem 0.75rem;
+}
+.skill-icon{
+    width: ;
+}
+}
+
 /* Contacct */
 .auth{
    display: flex;
