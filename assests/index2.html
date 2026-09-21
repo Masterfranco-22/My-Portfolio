@@ -43,8 +43,8 @@
       >
         ☾
       </button>
-      <button>
-        <a href="contact.html">Hire Me</a>
+      <button onclick="location.href = `../contact.html`" class="btn-1">
+        Hire Me
       </button>
     </header>
     <section>
@@ -112,7 +112,7 @@
               <a href="#projects">View project</a>
             </button>
             <button type="submit" class="btn2">
-              <a href="contact.html">Hire Me</a>
+              <a href="../contact.html">Hire Me</a>
             </button>
           </div>
         </div>
@@ -122,15 +122,49 @@
     <section id="projects" class="card reveal">
       <h2>My Projects.</h2>
       <div class="card-child">
-        <div class="cards"><img src="./assests/img/jab.png" alt="" /></div>
         <div class="cards">
-          <img src="./assests/img/project-1.png" alt="" />
+          <img src="img/jab.png" alt="jab" />
+          <div class="cards-child">
+            <h2>Jahbless Fashion Culture</h2>
+            <small
+              >This site is build, to make contact online and customer have
+              access to select and interact with the admin.
+            </small>
+            <div class="cards-child-2"><a href="//">Check</a></div>
+          </div>
         </div>
         <div class="cards">
-          <img src="./assests/img/Screenshot 2026-05-06 003840.png" alt="" />
+          <img src="img/project-1.png" alt="project" />
+          <div class="cards-child">
+            <h2>Jahbless Fashion Culture</h2>
+            <small
+              >This site is build, to make contact online and customer have
+              access to select and interact with the admin.
+            </small>
+            <div class="cards-child-2"><a href="//">Check</a></div>
+          </div>
         </div>
         <div class="cards">
-          <img src="./assests/img/Screenshot 2026-05-06 004447.png" alt="" />
+          <img src="img/Screenshot 2026-05-06 003840.png" alt="project3" />
+          <div class="cards-child">
+            <h2>Jahbless Fashion Culture</h2>
+            <small
+              >This site is build, to make contact online and customer have
+              access to select and interact with the admin.
+            </small>
+            <div class="cards-child-2"><a href="//">Check</a></div>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="img/Screenshot 2026-05-06 004447.png" alt="project4" />
+          <div class="cards-child">
+            <h2>Jahbless Fashion Culture</h2>
+            <small
+              >This site is build, to make contact online and customer have
+              access to select and interact with the admin.
+            </small>
+            <div class="cards-child-2"><a href="//">Check</a></div>
+          </div>
         </div>
       </div>
     </section>
@@ -162,7 +196,7 @@
           <label for="textarea" class="message">Message:</label>
         </div>
         <div>
-          <button type="submit" onclick="location.href = `/contact.html`">
+          <button type="submit" onclick="location.href = `../contact.html`">
             Submit
           </button>
         </div>
@@ -170,7 +204,7 @@
     </section>
     <footer class="site-footer reveal">
       <div class="footer-content">
-        <a href="/Landing.html" class="footer-logo">Franco Lee</a>
+        <a href="../Landing.html" class="footer-logo">Franco Lee</a>
 
         <p>
           Frontend and Full-Stack Web Developer building modern digital
@@ -178,20 +212,27 @@
         </p>
 
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="/Landing.html">Home</a>
-          <a href="service.html">Skills</a>
-          <a href="contact.html">Contact</a>
+          <a href="../Landing.html">Home</a>
+          <a href="../about.html">About</a>
+
+          <a href="../service.html">Services</a>
+          <a href="../project.html">Project</a>
         </nav>
 
         <div class="footer-socials">
-          <a href="#" aria-label="GitHub">GitHub</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="github.com" aria-label="GitHub">GitHub</a>
+          <a href="linkedin.com" aria-label="LinkedIn">LinkedIn</a>
         </div>
       </div>
 
       <p class="copyright">&copy; 2026 Franco Lee. All rights reserved.</p>
     </footer>
-    <script src="./js/theme-toggle.js" defer></script>
-    <script src="./js/scroll-reveal.js" defer></script>
+    <script src="../js/theme-toggle.js" defer></script>
+    <script src="../js/scroll-reveal.js" defer></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
