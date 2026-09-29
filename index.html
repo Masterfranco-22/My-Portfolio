@@ -2,353 +2,250 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width= , initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franco Lee | Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
-      background-color: black;
-      color: #e7e7e7;
-      min-height: 100vh;
-      line-height: 1.5;
-      width: 100%;
-    }
-
-    /* .layer-blur {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(10px);
-      z-index: -1;
-    } */
-    /* Gradient and layer blur effect */
-    .image-gradient {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.5;
-      z-index: -1;
-    }
-    .layer-blur {
-      position: absolute;
-      top: 20%;
-      right: 0;
-      left: 5%;
-      width: 30rem;
-      height: 0;
-      box-shadow: 0 0 700px 25px white;
-      rotate: -30deg;
-      z-index: -1;
-    }
-    /* container */
-    .container {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      overflow: hidden;
-      min-height: 82vh;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      width: 100%;
-      z-index: 999;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
-    .hire-me-button {
-      background-color: #a7a7a7;
-      color: black;
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 500;
-      border: 2px solid green;
-      transition: background-color 0.2s ease;
-      z-index: 999;
-    }
-    .hire-me-button:hover {
-      background-color: white;
-    }
-    /* MAIN CONTENT*/
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: calc(90vh - 6rem);
-    }
-    .content {
-      max-width: 40rem;
-      margin-left: 2%;
-      z-index: 999;
-    }
-
-    .tag-box {
-      position: relative;
-      width: 18rem;
-      height: 2.5rem;
-      border-radius: 50px;
-      background: linear-gradient(
-        to right,
-        #656565,
-        #7fa2a7,
-        #6600c5,
-        #5300a0,
-        #757575,
-        #656565
-      );
-      background-size: 200%;
-      animation: animationGradient 2.5s linear infinite;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    }
-    @keyframes animationGradient {
-      to {
-        background-position: 200%;
-      }
-    }
-
-    .tag-box .tag {
-      position: absolute;
-      inset: 3px 3px 3px 3px;
-      background-color: black;
-      border-radius: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.5s ease;
-      cursor: pointer;
-    }
-
-    .tag-box .tag:hover {
-      color: #5300a0;
-    }
-    .content h1 {
-      font-size: 4rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      margin: 2rem 0;
-      line-height: 1.2;
-      text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
-    }
-    .sub-heading {
-      font-size: 1.2rem;
-      letter-spacing: 0.5em;
-      font-weight: 400;
-      color: gray;
-      max-width: 35rem;
-    }
-
-    .content .button {
-      margin-top: 2rem;
-      z-index: 999;
-    }
-    .btn-get-started {
-      text-decoration: none;
-      border: 1px solid #2a2a2a;
-      padding: 0.7rem 1.2rem;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      transition: tranform 0.2s ease;
-    }
-    .btn-get-started:hover {
-      background-color: #1a1a1a;
-      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.3);
-      transform: scale(1.5%);
-    }
-
-    .robot-3d {
-      position: absolute;
-      top: 15%;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 0;
-    }
-
-    /* .robot-3d {
-      width: min(32rem, 85%);
-      height: min(42rem, 70vh);
-      display: block;
-      filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.35));
-    } */
-
-    /* tablet responsive */
-    /* @media (max-width: 1300px) {
-      header {
-        padding: 1rem 0.5rem;
-      }
-      .content {
-        margin-top: 85%;
-      }
-      .robot-3d {
-        scale: 0.8;
-        top: -20%;
-        right: 2%;
-      }
-    } */
-
-    /* mobile responsive */
-    @media (max-width: 768px) {
-      body {
-        min-height: 80vh;
-        width: 100%;
-      }
-      header {
-        padding: 0.6rem 1.5rem;
-        width: 100%;
-      }
-      header h1 {
-        font-size: 0.9rem;
-      }
-      .hire-me-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.5rem;
-      }
-
-      .content {
-        margin-top: 1rem;
-        max-width: 30rem;
-        margin-left: 10%;
-      }
-      .content h1 {
-        font-size: 2rem;
-      }
-      .sub-heading {
-        font-size: 0.9rem;
-        letter-spacing: 0.2em;
-        font-weight: 400;
-        color: gray;
-        max-width: 35rem;
-      }
-      .robot-3d {
-        width: 100%;
-        top: -6rem;
-        right: 0;
-        /* height: 40vh; */
-      }
-
-      .tag-box {
-        width: 12rem;
-      }
-      .content .button {
-        text-align: center;
-      }
-    }
-  </style>
   <body>
-    <img class="image-gradient" src="assests/img/gradient.png" alt="gradient" />
-    <div class="layer-blur"></div>
-
-    <div class="container">
-      <header>
-        <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">
-          Franco Lee
-        </h1>
+    <header>
+      <a href="Landing.html" class="logo">Franco Lee</a>
+      <nav>
+        <ul>
+          <li><a href="Landing.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
         <button
-          class="hire-me-button"
-          data-aos="fade-down"
-          data-aos-duration="1500"
-          onclick="location.href = `/index.html`"
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
         >
-          Let Build Something Great <i class="fas fa-arrow-right"></i>
+          ☾
         </button>
-      </header>
-      <main>
-        <div class="content">
-          <div
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-            data-aos-duration="1500"
-            class="tag-box"
-          >
-            <div class="tag">Web Developer &wedbar;</div>
+        <a href="contact.html" class="btn-1">Hire Me</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="hero reveal">
+        <div class="hero-img" aria-label="Franco Lee portrait"></div>
+        <div class="hero-box">
+          <div class="hero-content">
+            <span class="eyebrow">Available for freelance & collaboration</span>
+            <h4>Hi there, I'm Franco!</h4>
+            <h1>Frontend & Web Developer</h1>
+            <h3>
+              Computer Science student at Adekunle Ajasin University, building
+              modern, responsive, and user-friendly web experiences.
+            </h3>
+            <blockquote>
+              I turn ideas into functional digital products with clean code,
+              thoughtful design, and strong user experience.
+            </blockquote>
           </div>
-          <h1
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-            data-aos-duration="2000"
-            class="main-heading"
-          >
-            Hello, I'm Franco Lee 👋
-          </h1>
-          <p
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-            data-aos-duration="2500"
-            class="sub-heading"
-          >
-            I am a web developer with a passion for creating beautiful Website.
-          </p>
-          <div
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
-            data-aos-duration="3000"
-            class="button"
-          >
-            <a href="Landing.html" class="btn-get-started">Get Started &gt;</a>
+          <div class="btn">
+            <a href="project.html" class="btn1">View project</a>
+            <a href="contact.html" class="btn2">Hire Me</a>
           </div>
         </div>
-      </main>
+      </div>
+    </section>
 
-      <spline-viewer
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-        data-aos-offset="0"
-        data-aos-duration="3000"
-        class="robot-3d"
-        url="https://prod.spline.design/1LivOqvtJASXmCah/scene.splinecode"
-        branding="false"
-      ></spline-viewer>
-    </div>
-    <script
-      type="module"
-      src="https://cdn.spline.design/@splinetool/viewer@2.0.41/build/spline-viewer.js"
-    ></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <section class="brand-section reveal">
+      <div class="section-heading">
+        <span class="section-tag">Why clients choose me</span>
+        <h2>Building polished experiences that feel premium.</h2>
+      </div>
+
+      <div class="brand-grid">
+        <article class="brand-card">
+          <span class="brand-icon">01</span>
+          <h3>Design with clarity</h3>
+          <p>
+            I focus on clean structure, strong visual hierarchy, and a refined
+            user experience that feels modern and trustworthy.
+          </p>
+        </article>
+
+        <article class="brand-card">
+          <span class="brand-icon">02</span>
+          <h3>Build for performance</h3>
+          <p>
+            Every page is designed to be responsive, accessible, and easy to use
+            on every device without sacrificing style.
+          </p>
+        </article>
+
+        <article class="brand-card">
+          <span class="brand-icon">03</span>
+          <h3>Think like a problem solver</h3>
+          <p>
+            I approach projects with a practical mindset — turning business
+            goals into functional, conversion-focused digital experiences.
+          </p>
+        </article>
+      </div>
+
+      <div class="brand-metrics">
+        <div class="metric-box">
+          <strong>6+</strong>
+          <span>Month of learning</span>
+        </div>
+        <div class="metric-box">
+          <strong>5+</strong>
+          <span>Projects explored</span>
+        </div>
+        <div class="metric-box">
+          <strong>100%</strong>
+          <span>Dedication to quality</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card reveal">
+      <h2>Selected Projects</h2>
+      <div class="card-child">
+        <div class="cards">
+          <img
+            src="./assests/img/jab.png"
+            alt="Jahbless Fashion Culture project"
+          />
+          <div class="cards-child">
+            <h2>Jahbless Fashion Culture</h2>
+            <small>
+              A storefront-style website designed to help customers browse and
+              contact the brand with ease.
+            </small>
+            <div class="cards-child-2">
+              <a href="project.html">View Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img src="./assests/img/portfolio 2.png" alt="Portfolio project" />
+          <div class="cards-child">
+            <h2>Portfolio Website</h2>
+            <small>
+              A personal brand portfolio built to showcase skills, projects, and
+              services in a clean, modern layout.
+            </small>
+            <div class="cards-child-2">
+              <a href="project.html">View Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img
+            src="./assests/img/Screenshot 2026-05-06 003840.png"
+            alt="Business website"
+          />
+          <div class="cards-child">
+            <h2>Business Landing Page</h2>
+            <small>
+              A responsive landing page created to highlight a business offer
+              and convert visitors into leads.
+            </small>
+            <div class="cards-child-2">
+              <a href="project.html">View Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img
+            src="./assests/img/Screenshot 2026-05-06 004447.png"
+            alt="App style project"
+          />
+          <div class="cards-child">
+            <h2>UI Concept Project</h2>
+            <small>
+              A concept landing page that focuses on clean layout, strong visual
+              hierarchy, and smooth user interaction.
+            </small>
+            <div class="cards-child-2">
+              <a href="project.html">View Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth reveal">
+      <div class="auth-content">
+        <div>
+          <h1><a href="contact.html">Let’s build something great.</a></h1>
+          <p>Have a project in mind? I’d love to hear about it.</p>
+        </div>
+      </div>
+      <form action="#" method="POST">
+        <h3>Contact Me</h3>
+        <div class="wrappar">
+          <input id="name" type="text" placeholder="E.g John Doe" required />
+          <label for="name">Name:</label>
+        </div>
+        <div class="wrappar">
+          <input
+            id="email"
+            type="email"
+            placeholder="E.g john.doe@example.com"
+            required
+          />
+          <label for="email">Email:</label>
+        </div>
+        <div class="wrappar">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message here..."
+            required
+          ></textarea>
+          <label for="message" class="message">Message:</label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="site-footer reveal">
+      <div class="footer-content">
+        <a href="Landing.html" class="footer-logo">Franco Lee</a>
+        <p>Frontend and Web Developer building modern digital experiences.</p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="Landing.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="service.html">Services</a>
+          <a href="project.html">Project</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+
+      <p class="copyright">&copy; 2026 Franco Lee. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/theme-toggle.js" defer></script>
+    <script src="./js/scroll-reveal.js" defer></script>
   </body>
 </html>
