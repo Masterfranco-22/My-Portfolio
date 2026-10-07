@@ -1,0 +1,105 @@
+<?php
+
+?>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franco Lee | Contact</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="Landing.php" class="logo">Franco Lee</a>
+    <nav>
+      <ul>
+        <li><a href="Landing.php">Home</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="service.php">Services</a></li>
+        <li><a href="project.php">Project</a></li>
+      </ul>
+    </nav>
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      type="button"
+      aria-label="Switch to dark theme"
+      aria-pressed="false">
+      ☾
+    </button>
+  </header>
+
+  <section class="auth reveal">
+    <div class="auth-content">
+      <div>
+        <h1>Let’s Talk</h1>
+        <p>
+          I’m available for freelance work, collaborations, and new product
+          ideas.
+        </p>
+      </div>
+    </div>
+
+    <form action="hire.php" method="POST">
+      <h3>Contact Me</h3>
+      <div class="wrappar">
+        <input id="name" type="text" name="Name" placeholder="E.g John Doe" required />
+        <label for="name">Name:</label>
+      </div>
+      <div class="wrappar">
+        <input
+          id="email"
+          type="email"
+          name="Email"
+          placeholder="E.g john.doe@example.com"
+          required />
+        <label for="email">Email:</label>
+      </div>
+      <div class="wrappar">
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message here..."
+          required></textarea>
+        <label for="message" class="message">Message:</label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="site-footer reveal">
+    <div class="footer-content">
+      <a href="Landing.php" class="footer-logo">Franco Lee</a>
+      <p>Frontend and Web Developer building modern digital experiences.</p>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="Landing.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="service.php">Services</a>
+        <a href="project.php">Project</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a>
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; 2026 Franco Lee. All rights reserved.</p>
+  </footer>
+  <script src="./js/theme-toggle.js" defer></script>
+  <script src="./js/scroll-reveal.js" defer></script>
+</body>
+
+</html>
