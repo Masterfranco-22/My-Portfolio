@@ -14,9 +14,9 @@
     <nav>
       <ul>
         <li><a href="Landing.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="service.php">Services</a></li>
-        <li><a href="project.php">Project</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Project</a></li>
       </ul>
     </nav>
     <button
@@ -47,7 +47,7 @@
           </blockquote>
         </div>
         <div class="btn">
-          <a href="project.php" class="btn1">View project</a>
+          <a href="project.html" class="btn1">View project</a>
           <a href="contact.php" class="btn2">Hire Me</a>
         </div>
       </div>
@@ -83,7 +83,7 @@
             contact the brand with ease.
           </small>
           <div class="cards-child-2">
-            <a href="project.php">View Demo</a>
+            <a href="project.html">View Demo</a>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
             services in a clean, modern layout.
           </small>
           <div class="cards-child-2">
-            <a href="project.php">View Demo</a>
+            <a href="project.html">View Demo</a>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
             and convert visitors into leads.
           </small>
           <div class="cards-child-2">
-            <a href="project.php">View Demo</a>
+            <a href="project.html">View Demo</a>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@
             hierarchy, and smooth user interaction.
           </small>
           <div class="cards-child-2">
-            <a href="project.php">View Demo</a>
+            <a href="project.html">View Demo</a>
           </div>
         </div>
       </div>
@@ -178,9 +178,9 @@
 
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="Landing.php">Home</a>
-        <a href="about.php">About</a>
-        <a href="service.php">Services</a>
-        <a href="project.php">Project</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="project.html">Project</a>
       </nav>
 
       <div class="footer-socials">

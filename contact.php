@@ -17,9 +17,9 @@
     <nav>
       <ul>
         <li><a href="Landing.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="service.php">Services</a></li>
-        <li><a href="project.php">Project</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Project</a></li>
       </ul>
     </nav>
     <button
@@ -79,9 +79,9 @@
 
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="Landing.php">Home</a>
-        <a href="about.php">About</a>
-        <a href="service.php">Services</a>
-        <a href="project.php">Project</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="project.html">Project</a>
       </nav>
 
       <div class="footer-socials">
